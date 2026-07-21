@@ -18,9 +18,7 @@ A modern full-stack personal finance management application that helps users tra
 
 ### Home Page
 
-```
 ![Dashboard](screenshots/home.png)
-```
 
 ---
 
