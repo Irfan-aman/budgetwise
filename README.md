@@ -1,105 +1,248 @@
-# BudgetWise 💰
+# 💰 BudgetWise
 
-A full-stack personal finance app for tracking income and expenses, planning
-monthly budgets, and getting smart, rule-based insights into your spending —
-built with React, Node.js/Express, and MySQL.
+A modern full-stack personal finance management application that helps users track income and expenses, create monthly budgets, analyze spending habits, and generate financial reports.
 
----
-
-## Features
-
-- **Authentication** — register, login, logout, JWT-based sessions
-- **Dashboard** — total income, total expense, remaining balance, monthly
-  budget, savings, and recent transactions at a glance
-- **Income & Expense tracking** — add, edit, delete, and search records,
-  with expenses organized into 9 categories (Food, Rent, Shopping, Travel,
-  Education, Health, Entertainment, Bills, Others)
-- **Budget planning** — set a monthly budget per category and track it
-  against real spending
-- **Analytics Dashboard** — pie, bar, and line charts breaking down
-  spending by category and by day
-- **Smart Budget Insights** — rule-based (no AI) analysis that flags things
-  like exceeded budgets, category spending spikes month-over-month,
-  highest spending category, savings, and average daily spend
-- **Transaction History** — search, filter by category/date/type, and sort
-- **Profile management** — update name, change password
-- **Reports** — monthly summary plus CSV export for income and expenses
+> **Tech Stack:** React • Node.js • Express • MySQL (TiDB Cloud) • JWT • Render • Vercel
 
 ---
 
-## Tech Stack
+## 🌐 Live Demo
 
-| Layer      | Technology                                  |
-|------------|----------------------------------------------|
-| Frontend   | React (Vite), React Router, Axios, Recharts  |
-| Backend    | Node.js, Express.js                          |
-| Database   | TiDB Cloud (MySQL-compatible, serverless)    |
-| Auth       | JWT, bcrypt                                  |
-| Deployment | Vercel (frontend) · Render (backend) · TiDB Cloud (database) |
+**Frontend:** Coming Soon
+
+**Backend API:** Coming Soon
 
 ---
 
-## Project Structure
+## 📸 Screenshots
+
+### Home Page
 
 ```
-BudgetWise/
-├── client/                 React frontend (Vite)
-│   ├── src/
-│   │   ├── components/     Navbar, PrivateRoute, StatCard, TransactionTable
-│   │   ├── pages/           Home, Login, Register, Dashboard, Income, Expense,
-│   │   │                    Budget, Analytics, TransactionHistory, Profile, Reports
-│   │   ├── context/         AuthContext (JWT session state)
-│   │   ├── services/        Axios API client
-│   │   └── utils/           Formatting helpers, category constants
-│   └── index.html
+![Dashboard](screenshots/home.png)
+```
+
+---
+
+### 📊 Dashboard
+
+![Dashboard](screenshots/dashboard.png)
+
+---
+
+### 💰 Income
+
+![Income](screenshots/income.png)
+
+---
+
+### 💸 Expense
+
+![Expense](screenshots/expense.png)
+
+---
+
+### 🎯 Budget Planner
+
+![Budget](screenshots/budget.png)
+
+---
+
+### 📈 Analytics
+
+![Analytics](screenshots/analytics.png)
+
+---
+
+### 📄 Reports
+
+![Reports](screenshots/reports.png)
+
+---
+
+## ✨ Features
+
+### 🔐 Authentication
+
+- User Registration
+- Secure Login
+- JWT Authentication
+- Password Hashing using bcrypt
+- Protected Routes
+
+---
+
+### 📊 Dashboard
+
+- Total Income
+- Total Expenses
+- Current Balance
+- Monthly Budget
+- Savings Overview
+- Recent Transactions
+
+---
+
+### 💵 Income Management
+
+- Add Income
+- Edit Income
+- Delete Income
+- Search Income
+- Monthly Tracking
+
+---
+
+### 💸 Expense Management
+
+Track expenses across multiple categories:
+
+- Food
+- Rent
+- Shopping
+- Travel
+- Education
+- Health
+- Entertainment
+- Bills
+- Others
+
+Features:
+
+- Add Expense
+- Edit Expense
+- Delete Expense
+- Search Expenses
+- Filter by Category
+- Filter by Date
+
+---
+
+### 🎯 Budget Planning
+
+- Monthly Budget
+- Category-wise Budget
+- Budget Utilization
+- Budget Alerts
+
+---
+
+### 📈 Analytics
+
+- Category-wise Pie Chart
+- Daily Expense Trend
+- Monthly Comparison
+- Income vs Expense Analysis
+
+---
+
+### 🧠 Smart Insights
+
+Rule-based financial analysis:
+
+- Highest Spending Category
+- Budget Exceeded Detection
+- Monthly Spending Comparison
+- Daily Average Spending
+- Savings Summary
+
+---
+
+### 📄 Reports
+
+- Monthly Summary
+- CSV Export
+- Transaction History
+- Search & Filter
+
+---
+
+### 👤 Profile
+
+- Update Name
+- Change Password
+
+---
+
+## 🏗️ System Architecture
+
+```
+React (Vite)
+      │
+      ▼
+Axios API
+      │
+      ▼
+Express.js REST API
+      │
+      ▼
+JWT Authentication
+      │
+      ▼
+MySQL (TiDB Cloud)
+```
+
+---
+
+## 🛠 Tech Stack
+
+| Layer          | Technology                    |
+| -------------- | ----------------------------- |
+| Frontend       | React (Vite)                  |
+| Routing        | React Router                  |
+| HTTP Client    | Axios                         |
+| Charts         | Recharts                      |
+| Backend        | Node.js                       |
+| Framework      | Express.js                    |
+| Authentication | JWT + bcrypt                  |
+| Database       | TiDB Cloud (MySQL Compatible) |
+| Deployment     | Vercel + Render               |
+
+---
+
+## 📁 Project Structure
+
+```
+budgetwise/
 │
-└── server/                 Express backend
-    ├── config/              MySQL connection pool
-    ├── controllers/         Route handlers (auth, income, expense, budget,
-    │                        dashboard, profile, reports)
-    ├── models/               SQL queries per table
-    ├── routes/               Express routers
-    ├── middleware/           JWT auth guard, error handler
-    └── database/schema.sql   MySQL schema
+├── client/
+│   ├── src/
+│   │   ├── components/
+│   │   ├── context/
+│   │   ├── pages/
+│   │   ├── services/
+│   │   └── utils/
+│   ├── public/
+│   └── package.json
+│
+├── server/
+│   ├── config/
+│   ├── controllers/
+│   ├── database/
+│   │   └── schema.sql
+│   ├── middleware/
+│   ├── models/
+│   ├── routes/
+│   └── package.json
+│
+├── README.md
+└── .gitignore
 ```
 
 ---
 
-## Getting Started
+# 🚀 Installation
 
-### Prerequisites
-
-- Node.js 18+
-- npm
-- A MySQL-compatible database. This project is configured for **[TiDB Cloud](https://tidbcloud.com)**
-  (a free, serverless, MySQL-compatible cloud database), but any standard MySQL
-  works too — see [Getting Your Database](#getting-your-database) below.
-
-### 1. Clone and install
+## Clone Repository
 
 ```bash
-git clone https://github.com/<your-username>/budgetwise.git
+git clone https://github.com/irfan-aman/budgetwise.git
 cd budgetwise
 ```
 
-### 2. Getting your database (TiDB Cloud)
+---
 
-1. Sign up free at [tidbcloud.com](https://tidbcloud.com) and create a
-   **Serverless** cluster (the free tier used in this project).
-2. Open your cluster → click **Connect** → choose **General** (or **Node.js**)
-   to reveal your connection details: host, port (`4000`), user (looks like
-   `xxxxxxxx.root`), and password.
-3. Load the schema using the **SQL Editor** tab in the TiDB Cloud console
-   (left sidebar) — paste the contents of `server/database/schema.sql` and
-   run it. This avoids needing the `mysql` CLI or any local TLS setup.
-4. Copy the host/port/user/password into `server/.env` as shown below —
-   TiDB Cloud requires TLS, so make sure `DB_SSL=true` stays set.
-
-> Using plain MySQL instead? Any host works the same way — just load
-> `server/database/schema.sql` via your usual client and set `DB_SSL=false`
-> if it doesn't require TLS.
-
-### 3. Backend setup
+## Backend Setup
 
 ```bash
 cd server
@@ -107,122 +250,160 @@ npm install
 cp .env.example .env
 ```
 
-Edit `.env` with your TiDB Cloud (or MySQL) credentials from the step above,
-plus a random `JWT_SECRET`.
+Update `.env`
 
-Start the API:
+```env
+PORT=5000
+
+DB_HOST=your_host
+DB_PORT=4000
+DB_USER=your_username
+DB_PASSWORD=your_password
+DB_NAME=budgetwise
+DB_SSL=true
+
+JWT_SECRET=your_secret
+JWT_EXPIRES_IN=7d
+
+CLIENT_URL=http://localhost:5173
+```
+
+Start backend
 
 ```bash
 npm run dev
 ```
 
-The API runs at `http://localhost:5000`. Check `http://localhost:5000/health`.
+---
 
-### 4. Frontend setup
-
-In a new terminal:
+## Frontend Setup
 
 ```bash
 cd client
 npm install
 cp .env.example .env
+```
+
+Update
+
+```env
+VITE_API_URL=http://localhost:5000/api
+```
+
+Run
+
+```bash
 npm run dev
 ```
 
-Open `http://localhost:5173`, register an account, and start tracking.
+---
+
+## 📌 Environment Variables
+
+### Backend
+
+| Variable       | Description       |
+| -------------- | ----------------- |
+| PORT           | Backend Port      |
+| DB_HOST        | Database Host     |
+| DB_PORT        | Database Port     |
+| DB_USER        | Database Username |
+| DB_PASSWORD    | Database Password |
+| DB_NAME        | Database Name     |
+| DB_SSL         | Enable SSL        |
+| JWT_SECRET     | Secret Key        |
+| JWT_EXPIRES_IN | Token Expiry      |
+| CLIENT_URL     | Frontend URL      |
 
 ---
 
-## Environment Variables
+## 📡 API Endpoints
 
-**server/.env**
+### Authentication
 
-| Variable       | Description                                  |
-|----------------|-----------------------------------------------|
-| `PORT`         | Port the API listens on (default `5000`)      |
-| `DB_HOST`      | TiDB Cloud (or MySQL) host                    |
-| `DB_PORT`      | `4000` for TiDB Cloud, `3306` for standard MySQL |
-| `DB_USER`      | TiDB Cloud user (e.g. `xxxxxxxx.root`) or MySQL user |
-| `DB_PASSWORD`  | Database password                             |
-| `DB_NAME`      | Database name (`budgetwise`)                  |
-| `DB_SSL`       | `true` for TiDB Cloud (required) and most managed hosts |
-| `JWT_SECRET`   | Long random string used to sign auth tokens   |
-| `JWT_EXPIRES_IN` | Token lifetime, e.g. `7d`                   |
-| `CLIENT_URL`   | Deployed frontend URL, for CORS               |
+- POST `/api/auth/register`
+- POST `/api/auth/login`
 
-**client/.env**
+### Income
 
-| Variable       | Description                          |
-|----------------|----------------------------------------|
-| `VITE_API_URL` | Backend API base URL, e.g. `http://localhost:5000/api` |
+- GET `/api/income`
+- POST `/api/income`
+- PUT `/api/income/:id`
+- DELETE `/api/income/:id`
 
----
+### Expenses
 
-## API Reference
+- GET `/api/expense`
+- POST `/api/expense`
+- PUT `/api/expense/:id`
+- DELETE `/api/expense/:id`
 
-| Method | Endpoint                | Description              |
-|--------|--------------------------|---------------------------|
-| POST   | `/api/auth/register`     | Create an account         |
-| POST   | `/api/auth/login`        | Log in, returns JWT       |
-| POST   | `/api/auth/logout`       | Log out                   |
-| GET    | `/api/income`             | List income (supports `search`, `startDate`, `endDate`) |
-| POST   | `/api/income`             | Add income                |
-| PUT    | `/api/income/:id`         | Update income             |
-| DELETE | `/api/income/:id`         | Delete income             |
-| GET    | `/api/expense`            | List expenses (supports `search`, `category`, `startDate`, `endDate`) |
-| POST   | `/api/expense`            | Add expense                |
-| PUT    | `/api/expense/:id`        | Update expense              |
-| DELETE | `/api/expense/:id`        | Delete expense              |
-| GET    | `/api/budget`             | List budgets for a month/year |
-| POST   | `/api/budget`             | Set a category budget      |
-| PUT    | `/api/budget/:id`         | Update a budget             |
-| DELETE | `/api/budget/:id`         | Delete a budget             |
-| GET    | `/api/dashboard`          | Dashboard summary + insights |
-| GET    | `/api/dashboard/analytics`| Chart data for a month     |
-| GET    | `/api/profile`            | Get current user profile   |
-| PUT    | `/api/profile`            | Update name / password     |
-| GET    | `/api/reports/summary`    | Monthly income/expense summary |
-| GET    | `/api/reports/income/csv` | Download income as CSV     |
-| GET    | `/api/reports/expense/csv`| Download expenses as CSV   |
+### Budget
 
-All routes except `/api/auth/*` require an `Authorization: Bearer <token>` header.
+- GET `/api/budget`
+- POST `/api/budget`
+- PUT `/api/budget/:id`
+- DELETE `/api/budget/:id`
+
+### Dashboard
+
+- GET `/api/dashboard`
+- GET `/api/dashboard/analytics`
+
+### Profile
+
+- GET `/api/profile`
+- PUT `/api/profile`
+
+### Reports
+
+- GET `/api/reports/summary`
+- GET `/api/reports/income/csv`
+- GET `/api/reports/expense/csv`
 
 ---
 
-## Deployment
+## ☁️ Deployment
 
-This app deploys cleanly as three pieces: a database, the Express API,
-and the React frontend.
+### Database
 
-1. **Database** — this project uses [TiDB Cloud](https://tidbcloud.com)'s
-   free Serverless tier (MySQL-compatible). Create a cluster, run
-   `server/database/schema.sql` in its SQL Editor, and note the connection
-   details from the **Connect** panel. (Any managed MySQL host works too.)
-2. **Backend → Render** — new Web Service, root directory `server`,
-   build command `npm install`, start command `npm start`. Add all the
-   `server/.env` variables above as environment variables — including
-   `DB_SSL=true` for TiDB Cloud.
-3. **Frontend → Vercel** — new Project, root directory `client`, framework
-   auto-detected as Vite. Add `VITE_API_URL` pointing at your Render API
-   URL + `/api`.
-4. Update `CLIENT_URL` on Render to your live Vercel URL so CORS allows it.
+- TiDB Cloud (Serverless)
+
+### Backend
+
+- Render
+
+### Frontend
+
+- Vercel
 
 ---
 
-## Future Enhancements
+## 📚 What I Learned
 
-- Email notifications
-- Dark mode
-- Recurring expenses
-- UPI integration
-- OCR bill scanner
-- Mobile app
-- Multi-language support
+- REST API Development
+- JWT Authentication
+- Password Hashing with bcrypt
+- React Context API
+- Express Middleware
+- SQL Database Design
+- Cloud Database Integration
+- Backend Deployment
+- Frontend Deployment
 
 ---
 
-## License
+## 🚀 Future Improvements
 
-This project is available for personal and educational use. Add a license
-of your choice (MIT is a common pick for open-source projects) before
-publishing publicly.
+- Dark Mode
+- Email Notifications
+- OCR Bill Scanner
+- Recurring Transactions
+- Mobile App
+- Progressive Web App (PWA)
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License.
