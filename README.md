@@ -8,7 +8,7 @@ A modern full-stack personal finance management application that helps users tra
 
 ## 🌐 Live Demo
 
-- **Live Application:** https://budgetwise-svxtmv4qh-irfan0781.vercel.app
+- **Live Application:** https://budgetwise-ebon.vercel.app/
 - **Backend API:** https://budgetwise-api-vehr.onrender.com/api
 
 ---
